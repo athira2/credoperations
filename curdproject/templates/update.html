@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <<div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">SL NO</label>
+        <input type="number" class="form-control" id="slno" value="{{task.slno}}, aria-describedby="emailHelp">
+    </div>
+    <<div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Item Name</label>
+        <input type="text" class="form-control" id="Item_name" value="{{task.Item_name}}, aria-describedby="emailHelp">
+    </div>
+    <<div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"> Description</label>
+        <input type="text" class="form-control" id="desc" value="{{task.desc}}, aria-describedby="emailHelp">
+    </div>
+    <input type="submit" value="Update">
+  </form>
+
+{% endblock %}  
